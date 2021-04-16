@@ -75,9 +75,10 @@ namespace ChadApi
             });
 
             services.AddDbContext<ChadDb>(
-                options => options.UseSqlite(
+                options => options.UseMySql (
                     Configuration.GetConnectionString("CHAD"),
-                    b => b.MigrationsAssembly("ChadApi")));
+                    new MySqlServerVersion(new Version(8,0,22)),
+                    b => b.MigrationsAssembly(nameof(ChadApi))));
             services.AddDefaultIdentity<DbUser>(options =>
                     {
                         options.Password.RequireDigit = false;
