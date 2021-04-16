@@ -1,0 +1,19 @@
+
+<!--suppress ALL -->
+
+<div class="text-center mt-25">
+  <div class="form-login">
+      <img class="mb-4" src="assets/logo.png" alt="" width="72" height="72">
+    <h1 class="h3 mb-3 font-weight-normal">登录CHAD课程资源管理</h1>
+    <input type="text" id="login-um" class="form-control" placeholder="用户名" required autofocus [(ngModel)]="username">
+    <input type="password" id="inputPassword" class="form-control" placeholder="密码" required [(ngModel)]="password">
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me" [(ngModel)]="rememberMe"> 记住我
+      </label>
+    </div>
+    <button class="btn btn-lg btn-primary btn-block" type="submit" (click)="submit()" [disabled]="loading">登录</button>
+  </div>
+
+</div>
+

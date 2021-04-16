@@ -1,0 +1,58 @@
+<header class="h-auto">
+  <nav *ngIf="account.user" class="navbar navbar-expand-sm navbar-light text-dark fixed-top bg-light text-center">
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar"
+            aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fas fa-bars"></i>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbar">
+      <ng-content select=".navbar-links"></ng-content>
+      <ul class="navbar-nav mr-auto navbar-links">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/Home" routerLinkActive="active">首页<span class="sr-only">(current)</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link"
+             routerLink="/Chat" routerLinkActive="active">
+            私信
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link"
+             routerLink="/Manager" routerLinkActive="active">
+            管理
+          </a>
+        </li>
+
+      </ul>
+      <div class="navbar-nav mr-auto text-center">
+        <ng-content select=".navbar-main"></ng-content>
+
+      </div>
+      <ng-content select=".navbar-buttons"></ng-content>
+      <div class="dropdown">
+        <button class="btn  nav-link w-16 text-center"
+                data-toggle="dropdown">
+          <i class="fas fa-user icon"
+             data-toggle="tooltip" data-placement="top"
+             title="账户">
+          </i>
+
+        </button>
+        <div class="dropdown-menu dropdown-menu-right">
+          <h5 class="dropdown-header title-text">你好！{{account.user.name}}</h5>
+          <a class="dropdown-item Chad-nav-button"
+             data-toggle="modal" data-target="#chpwd">修改密码</a>
+
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item Chad-nav-button" (click)="account.logout()">退出登录</a>
+        </div>
+      </div>
+
+    </div>
+
+  </nav>
+</header>
+<app-change-password-dialog cid="chpwd"></app-change-password-dialog>

@@ -1,0 +1,13 @@
+﻿[*.cs]
+
+# CA2007: 考虑对等待的任务调用 ConfigureAwait
+dotnet_diagnostic.CA2007.severity = silent
+
+# CA1819: 属性不应返回数组
+dotnet_diagnostic.CA1819.severity = silent
+
+# CS8618: 在退出构造函数时，不可为 null 的字段必须包含非 null 值。请考虑声明为可以为 null。
+dotnet_diagnostic.CS8618.severity = silent
+
+# CA2227: 集合属性应为只读
+dotnet_diagnostic.CA2227.severity = silent

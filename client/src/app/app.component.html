@@ -1,0 +1,14 @@
+<main role="main" class="flex-shrink-0">
+<!--  <app-assessment-form></app-assessment-form>-->
+  <app-navbar *ngIf="acc.user"></app-navbar>
+  <router-outlet></router-outlet>
+</main>
+<app-messages class="ngb-toasts"></app-messages>
+<app-add-element-dialog></app-add-element-dialog>
+<app-select-element-dialog></app-select-element-dialog>
+<app-select-user-dialog></app-select-user-dialog>
+<footer class="navbar navbar-expand-sm mt-auto navbar-light pb-0 mb-0 rounded-bottom bg-SchOOD-L1 clearfix">
+  <div class="float-left">
+    <span class="d-block">&copy; Ferdinand Sukhoi 2021</span>
+  </div>
+</footer>

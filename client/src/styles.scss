@@ -1,0 +1,61 @@
+/* You can add global styles to this file, and also import other style files */
+.table-item-text {
+  vertical-align: bottom;
+  font-size: 20px
+}
+
+.title-text {
+  vertical-align: center;
+  font-size: 25px
+}
+
+.s20-text {
+  vertical-align: center;
+  font-size: 20px
+}
+
+.transparent {
+  opacity: 0.0
+}
+
+.bg-Chad-L2 {
+  background-color: #7952b3
+}
+
+.Chad-nav-button{
+  cursor:pointer;
+}
+
+.bg-Chad-L1 {
+  background-color: #a283cd
+}
+
+.icon {
+  height: 17px;
+  width: 17px;
+}
+
+main > .container {
+  padding: 60px 15px 0;
+}
+
+.footer {
+  bottom: 0;
+  line-height: 60px; /* Vertically center the text there */
+  position: absolute;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.cur-std{
+  cursor:default
+}
+
+/*.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}*/
+
+code {
+  font-size: 80%;
+}

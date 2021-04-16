@@ -1,0 +1,97 @@
+<main role="main" class="container py-5">
+
+  <div class="accordion my-5 shadow" id="homeAccordion">
+    <div class="card-header">
+      <h1 *ngIf="account.user" class="mb-0">
+        {{account.user.name}}的个人主页
+      </h1>
+    </div>
+
+    <div class="card-body">
+      欢迎来到CHAD！
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2 class="mb-0">
+          <button class="btn nav-link btn-block text-left" type="button" data-toggle="collapse"
+                  data-target="#coursesCollapse">
+              我的课程
+          </button>
+
+        </h2>
+      </div>
+
+      <div id="coursesCollapse" class="collapse show" aria-labelledby="headingOne" data-parent="#homeAccordion">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li *ngFor="let cls of courses" class="list-group-item">
+              <a [routerLink]="'/Courses/'+cls.id">{{cls.name}}</a>
+              <button *ngIf="account.isTeacher" class="btn btn-danger float-right"
+              (click)="runRequest(chad.deleteCourse(cls.id))">删除</button>
+            </li>
+          </ul>
+          <button *ngIf="account.isTeacher" class="btn btn-primary float-left m-3"
+          (click)="newCourse()">新增</button>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h2 class="mb-0">
+          <button class="btn nav-link btn-block text-left" type="button" data-toggle="collapse"
+                  data-target="#classesCollapse">
+            我的班级
+          </button>
+        </h2>
+      </div>
+
+      <div id="classesCollapse" class="collapse" aria-labelledby="headingOne" data-parent="#homeAccordion">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li *ngFor="let cls of classes" class="list-group-item">
+              <a [routerLink]="'/Classes/'+cls.id">{{cls.name}}</a>
+              <button *ngIf="account.isTeacher" class="btn btn-danger float-right"
+              (click)="runRequest(chad.deleteClass(cls.id))">删除</button>
+            </li>
+          </ul>
+          <button *ngIf="account.isTeacher" class="btn btn-primary float-left m-3"
+          (click)="newClass()">新增</button>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="card" *ngIf="account.isTeacher">
+      <div class="card-header">
+        <h2 class="mb-0">
+          <button class="btn nav-link btn-block text-left" type="button" data-toggle="collapse"
+                  data-target="#resourcesCollapse">
+            我的资源
+          </button>
+        </h2>
+      </div>
+
+      <div id="resourcesCollapse" class="collapse" aria-labelledby="headingOne" data-parent="#homeAccordion">
+        <div class="card-body">
+
+          <ul class="list-unstyled col">
+            <li *ngFor="let file of resources" class="media bg-gray m-1">
+              <i [class]="vh.getFileIcon(file.name)"></i>
+              <div class="media-body container">
+                <h5 class="mt-0 mb-2 col-8">{{file.name}}
+                  <button class="btn btn-danger mr-1 float-right" (click)="runRequest( res.deleteResource(file.id))">删除</button>
+                  <button class="btn btn-primary mr-1 float-right" (click)="res.downloadResource(file)">下载</button>
+                </h5>
+                <span class="col-sm">{{file.uploader}}</span>
+                <small class="col">{{vh.formatFileSize(file.size)}}</small>
+
+
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

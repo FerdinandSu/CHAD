@@ -1,0 +1,84 @@
+<main role="main" class="container py-5">
+
+  <div class="accordion my-5 shadow" id="chatAccordion">
+    <div class="card-header">
+      <h1 class="mb-0">
+        站内消息
+      </h1>
+    </div>
+
+    <div class="card-body">
+      在这里，你可以收发站内消息。
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2 class="mb-0">
+          <button class="btn nav-link btn-block text-left" type="button" data-toggle="collapse"
+                  data-target="#newMessageCollapse">
+            发送消息
+          </button>
+
+        </h2>
+      </div>
+
+      <div id="newMessageCollapse" class="collapse show" aria-labelledby="headingOne" data-parent="#chatAccordion">
+        <div class="card-body">
+          <div>
+            <div class="form-group">
+              <label>收信人</label>
+              <div class="input-group">
+                <input class="form-control" type="text" readonly
+                       [ngModel]="svc.newMessage.remote?svc.newMessage.remote.name:'-----'">
+                <div class="input-group-append">
+                  <button class="btn btn-outline-secondary" (click)="selectRemote()">...</button>
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>内容</label>
+              <input class="form-control" type="text" [(ngModel)]="svc.newMessage.content">
+            </div>
+            <button class="btn btn-primary my-3 float-left" (click)="svc.sendMessage()">发送</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2 class="mb-0">
+          <button class="btn nav-link btn-block text-left" type="button" data-toggle="collapse"
+                  data-target="#chatMessagesCollapse">
+            历史消息
+          </button>
+        </h2>
+      </div>
+
+      <div id="chatMessagesCollapse" class="collapse" aria-labelledby="headingOne" data-parent="#chatAccordion">
+        <div class="card-body">
+          <div class="row">
+            <button class="btn btn-primary mx-3 my-3 float-left" (click)="svc.refresh()">刷新</button>
+          </div>
+          <div class="row">
+            <ul class="list-unstyled col">
+              <li *ngFor="let file of svc.messages" class="media bg-gray m-1">
+                <i *ngIf="file.fromCurrentUser" class="fas fa-arrow-right text-danger"></i>
+                <i *ngIf="!file.fromCurrentUser" class="fas fa-arrow-left text-primary"></i>
+                <div class="media-body container">
+                  <h5 class="mt-0 mb-2 col-8">{{file.remote?.name}}
+                  </h5>
+                  <span class="col-sm">{{file.content}}</span>
+                  <small class="col">{{file.time}}</small>
+
+
+                </div>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

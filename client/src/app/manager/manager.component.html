@@ -1,0 +1,64 @@
+<main role="main" class="container py-5">
+
+  <div class="accordion my-5 shadow" id="managerAccordion">
+    <div class="card-header">
+      <h1 class="mb-0">
+        管理中心
+      </h1>
+    </div>
+
+    <div class="card-body">
+      欢迎来到CHAD管理中心！
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2 class="mb-0">
+          <button class="btn nav-link btn-block text-left" type="button" data-toggle="collapse"
+                  data-target="#usersCollapse">
+            用户
+          </button>
+
+        </h2>
+      </div>
+
+      <div id="usersCollapse" class="collapse show" aria-labelledby="headingOne" data-parent="#managerAccordion">
+        <div class="card-body">
+          <div class="container-fluid">
+            <button type="button" class="btn-outline-success btn float-left m-1 my-3 w-16 text-center"
+                    (click)="svc.showAddDialog()">
+              添加用户
+            </button>
+            <table class="table">
+              <thead>
+              <tr>
+                <th scope="col">&emsp;</th>
+                <th scope="col">用户名</th>
+                <th scope="col">姓名</th>
+                <th scope="col">角色</th>
+                <th scope="col">&emsp;</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let user of svc.managedUsers, let i=index">
+                <th scope="row">{{i + 1}}</th>
+                <td>{{user.username}}</td>
+                <td>{{user.name}}</td>
+
+                <td>{{vh.formatUserRole(user.role)}}</td>
+                <td>
+                  <button *ngIf="user.role!=ADMIN" class="btn btn-danger text-center h-auto"
+                          (click)="delUser(user.username)">
+                    删除
+                  </button>
+                </td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+<app-add-user-dialog></app-add-user-dialog>

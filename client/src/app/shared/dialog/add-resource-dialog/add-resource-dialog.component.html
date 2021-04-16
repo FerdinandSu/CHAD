@@ -1,0 +1,63 @@
+<div class="modal fade" id="add-resource-dialog" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">新增资源</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <nav>
+          <div class="nav nav-tabs" id="nav-tab" role="tablist">
+            <a class="nav-link active cur-std" id="nav-home-tab" (click)="svc.uploadNew=false" data-toggle="tab"
+               data-target="#res-nav-use-current" role="tab">使用现有资源</a>
+            <a class="nav-link cur-std" id="nav-profile-tab" (click)="svc.uploadNew=true" data-toggle="tab"
+               data-target="#res-nav-upload-new" role="tab">上传资源</a>
+          </div>
+        </nav>
+        <div class="tab-content border-1" id="nav-tabContent">
+          <div class="tab-pane fade show active" id="res-nav-use-current" role="tabpanel">
+            <div class="m-1">
+              <div class="form-group">
+                <label>选择资源</label>
+                <select class="custom-select"
+                        [disabled]="svc.uploadNew"
+                        [(ngModel)]="svc.selectedValue">
+                  <option [ngValue]="undefined">
+                    -----
+                  </option>
+                  <option *ngFor="let ci of svc.resources" [ngValue]="ci">
+                    {{ci.name}}
+                  </option>
+                </select>
+              </div>
+            </div>
+
+          </div>
+          <div class="tab-pane fade" id="res-nav-upload-new" role="tabpanel">
+            <div class="m-1">
+              <div class="form-group">
+                <label>选择文件</label>
+                <div class="custom-file">
+                  <input type="file" class="custom-file-input" [placeholder]="svc.fileName"
+                         [disabled]="!svc.uploadNew"
+                         (change)="svc.selectFile($event)" id="customFile">
+                  <label class="custom-file-label" for="customFile">选择文件</label>
+                  <small>{{svc.fileName}}</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-warning" (click)="submit()">确认</button>
+      </div>
+    </div>
+  </div>
+</div>

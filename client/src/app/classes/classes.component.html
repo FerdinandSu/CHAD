@@ -1,0 +1,41 @@
+<main role="main" class="container py-5" style="margin-bottom: 25%">
+
+  <div class="accordion my-5 shadow" id="coursesAccordion">
+    <div class="card-header">
+      <h1 class="mb-0">
+        {{theClass.name}}
+      </h1>
+    </div>
+
+    <div class="card-body">
+      指导老师：{{theClass.director.name}}
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h2 class="mb-0">
+          <button class="btn nav-link  text-left" type="button" data-toggle="collapse"
+                  data-target="#studentsCollapse">
+            学生
+          </button>
+
+        </h2>
+      </div>
+
+      <div id="studentsCollapse" class="collapse show" aria-labelledby="headingOne" data-parent="#coursesAccordion">
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li *ngFor="let cls of theClass.students" class="list-group-item">
+              {{cls.name}}
+              <button *ngIf="acc.canManage(theClass.director.username)"
+                      class="btn btn-danger float-right"
+                      (click)="chad.excludeStudent(theClass.id,cls)">删除
+              </button>
+            </li>
+          </ul>
+          <button *ngIf="acc.canManage(theClass.director.username)" class="btn btn-primary float-left m-3" (click)="addCourse()">新增</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>

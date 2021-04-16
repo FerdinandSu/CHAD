@@ -1,0 +1,31 @@
+<div class="modal fade" id="add-element-dialog" tabindex="-1" role="dialog">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">新增{{svc.elementTypeName}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div *ngIf="svc.newValue">
+          <div class="form-group">
+            <label>名称</label>
+            <input type="text" class="form-control" [(ngModel)]="svc.newValue.name">
+          </div>
+          <div *ngIf="svc.elementTypeName!='班级'" class="form-group">
+            <label>说明</label>
+            <input type="text" class="form-control" [(ngModel)]="svc.newValue.description">
+          </div>
+        </div>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">取消</button>
+        <button type="button" class="btn btn-primary" (click)="submit()">确认</button>
+      </div>
+    </div>
+  </div>
+</div>
