@@ -6,6 +6,5 @@ namespace Chad.Models.Common
         ///     用户的角色
         /// </summary>
         public UserRole Role { get; init; }
-
     }
 }

@@ -18,11 +18,11 @@ export class LessonsComponent implements OnInit
 {
   lesson: Lesson = {
     course: {
-      name: 'crs',
-      id: '0'
+      name: '',
+      id: ''
     },
     name: '',
-    id: '0',
+    id: '',
     description: '',
     resources: []
   };

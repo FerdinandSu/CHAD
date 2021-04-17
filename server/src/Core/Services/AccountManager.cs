@@ -42,7 +42,7 @@ namespace Chad.Services
         {
             return HttpContext?.User is null
                 ? null
-                : new ManagedUser()
+                : new ManagedUser
                 {
                     Name = HttpContext.User.FindFirstValue(ClaimTypes.Name),
                     Username = HttpContext.User.FindFirstValue(ClaimTypes.NameIdentifier),
@@ -160,7 +160,7 @@ namespace Chad.Services
             await Db.SaveChangesAsync();
             Logger.LogWarning($"User {dbu.Id}({dbu.FriendlyName}) Created. Initial password: {user.InitialPassword}.");
 
-            return new ManagedUser()
+            return new ManagedUser
             {
                 Name = user.Name,
                 Username = user.Username,
@@ -176,7 +176,7 @@ namespace Chad.Services
         public async ValueTask<IList<DbUser>> GetUsersAsync(UserRole? role = null)
         {
             if (role != null)
-                return await UserManager.GetUsersForClaimAsync(GetRoleClaim((UserRole)role));
+                return await UserManager.GetUsersForClaimAsync(GetRoleClaim((UserRole) role));
             return await Db.Users.ToListAsync();
         }
 

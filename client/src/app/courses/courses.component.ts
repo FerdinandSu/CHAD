@@ -18,17 +18,14 @@ export class CoursesComponent implements OnInit
 {
   course: Course = {
     name: '',
-    id: '0',
+    id: '',
     description: '',
     director: {
-      name: 'dk',
-      username: 'dkk'
+      name: '',
+      username: ''
     },
     classes: [],
-    lessons: [{
-      name: 'foo',
-      id: '0'
-    }]
+    lessons: []
   };
 
   constructor(private route: ActivatedRoute,

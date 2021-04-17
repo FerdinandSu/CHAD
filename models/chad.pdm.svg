@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="272mm" xmlns="http://www.w3.org/2000/svg" height="211mm" version="1.1" viewBox="0 0 1029 799" xmlns:xlink="http://www.w3.org/1999/xlink">
+   <polyline fill="none" points="907,577 907,711" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="907,711 904,697 910,697" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="278,708 278,553 310,553" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="310,553 296,556 296,550" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="158,608 158,537 310,537" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="310,537 296,540 296,534" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="741,745 804,745" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="804,745 791,748 791,742" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="600,721 600,549 539,549" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="539,549 553,546 553,552" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="209,486 310,486" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="310,486 296,489 296,483" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="588,375 440,375 440,427" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="440,427 437,414 443,414" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="424,427 424,359 497,359 497,291" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="424,427 421,414 427,414" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="468,82 468,152 497,152 497,223" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="497,223 494,210 500,210" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="424,717 424,651" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="424,651 427,664 421,664" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="440,717 440,651" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="440,651 443,664 437,664" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="674,183 674,335" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="674,335 671,321 677,321" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="644,183 644,257 586,257" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="586,257 599,254 599,260" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="253,56 253,42 379,42" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="379,42 365,45 365,39" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="245,112 245,230" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="245,230 242,217 248,217" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="604,483 539,483" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="539,483 553,480 553,486" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="674,456 674,391" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="674,391 677,404 671,404" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <polyline fill="none" points="318,334 318,427" stroke="#0080c0" stroke-width="1"/>
+   <polygon fill="#0080c0" points="318,427 315,414 321,414" stroke="#0080c0" stroke-width="1" stroke-linejoin="miter"/>
+   <rect x="855" y="509" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient1" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="855" y="509" fill="url(#Gradient1)" width="172" height="68" stroke="#0080c0" stroke-width="1"/>
+   <text x="941" y="519" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">aspnetroleclaims</text>
+   <line x1="855" x2="1027" y1="524" y2="524" stroke="#0080c0" stroke-width="1"/>
+   <text x="860" y="534" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">Id</text>
+   <text x="860" y="545" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">RoleId</text>
+   <text x="860" y="556" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">ClaimType</text>
+   <text x="860" y="567" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">ClaimValue</text>
+   <text x="918" y="534" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">int</text>
+   <text x="918" y="545" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(255)</text>
+   <text x="918" y="556" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">longtext</text>
+   <text x="918" y="567" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">longtext</text>
+   <text x="986" y="534" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk&gt;</text>
+   <text x="986" y="545" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">&lt;fk&gt;</text>
+   <rect x="804" y="711" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient2" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="804" y="711" fill="url(#Gradient2)" width="207" height="68" stroke="#0080c0" stroke-width="1"/>
+   <text x="907" y="721" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">aspnetroles</text>
+   <line x1="804" x2="1011" y1="726" y2="726" stroke="#0080c0" stroke-width="1"/>
+   <text x="809" y="736" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">Id</text>
+   <text x="809" y="747" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">Name</text>
+   <text x="809" y="758" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">NormalizedName</text>
+   <text x="809" y="769" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">ConcurrencyStamp</text>
+   <text x="897" y="736" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">varchar(255)</text>
+   <text x="897" y="747" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(256)</text>
+   <text x="897" y="758" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(256)</text>
+   <text x="897" y="769" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">longtext</text>
+   <text x="965" y="736" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk&gt;</text>
+   <text x="965" y="758" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">&lt;ak&gt;</text>
+   <rect x="108" y="708" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient3" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="108" y="708" fill="url(#Gradient3)" width="172" height="68" stroke="#0080c0" stroke-width="1"/>
+   <text x="194" y="718" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">aspnetuserclaims</text>
+   <line x1="108" x2="280" y1="723" y2="723" stroke="#0080c0" stroke-width="1"/>
+   <text x="113" y="733" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">Id</text>
+   <text x="113" y="744" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">UserId</text>
+   <text x="113" y="755" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">ClaimType</text>
+   <text x="113" y="766" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">ClaimValue</text>
+   <text x="171" y="733" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">int</text>
+   <text x="171" y="744" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(255)</text>
+   <text x="171" y="755" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">longtext</text>
+   <text x="171" y="766" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">longtext</text>
+   <text x="239" y="733" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk&gt;</text>
+   <text x="239" y="744" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">&lt;fk&gt;</text>
+   <rect x="46" y="608" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient4" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="46" y="608" fill="url(#Gradient4)" width="224" height="68" stroke="#0080c0" stroke-width="1"/>
+   <text x="158" y="618" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">aspnetuserlogins</text>
+   <line x1="46" x2="270" y1="623" y2="623" stroke="#0080c0" stroke-width="1"/>
+   <text x="50" y="633" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">LoginProvider</text>
+   <text x="50" y="644" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">ProviderKey</text>
+   <text x="50" y="655" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">ProviderDisplayName</text>
+   <text x="50" y="666" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">UserId</text>
+   <text x="153" y="633" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">varchar(128)</text>
+   <text x="153" y="644" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">varchar(128)</text>
+   <text x="153" y="655" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">longtext</text>
+   <text x="153" y="666" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(255)</text>
+   <text x="221" y="633" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk&gt;</text>
+   <text x="221" y="644" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk&gt;</text>
+   <text x="221" y="666" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">&lt;fk&gt;</text>
+   <rect x="569" y="721" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient5" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="569" y="721" fill="url(#Gradient5)" width="172" height="53" stroke="#0080c0" stroke-width="1"/>
+   <text x="655" y="731" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">aspnetuserroles</text>
+   <line x1="569" x2="741" y1="736" y2="736" stroke="#0080c0" stroke-width="1"/>
+   <text x="574" y="746" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">UserId</text>
+   <text x="574" y="757" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">RoleId</text>
+   <text x="612" y="746" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">varchar(255)</text>
+   <text x="612" y="757" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">varchar(255)</text>
+   <text x="680" y="746" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk,fk2&gt;</text>
+   <text x="680" y="757" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk,fk1&gt;</text>
+   <rect x="310" y="427" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient6" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="310" y="427" fill="url(#Gradient6)" width="229" height="224" stroke="#0080c0" stroke-width="1"/>
+   <text x="424" y="437" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">aspnetusers</text>
+   <line x1="310" x2="539" y1="442" y2="442" stroke="#0080c0" stroke-width="1"/>
+   <text x="314" y="452" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">Id</text>
+   <text x="314" y="463" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">FriendlyName</text>
+   <text x="314" y="474" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">Role</text>
+   <text x="314" y="485" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">UserName</text>
+   <text x="314" y="496" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">NormalizedUserName</text>
+   <text x="314" y="507" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">Email</text>
+   <text x="314" y="518" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">NormalizedEmail</text>
+   <text x="314" y="529" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">EmailConfirmed</text>
+   <text x="314" y="540" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">PasswordHash</text>
+   <text x="314" y="551" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">SecurityStamp</text>
+   <text x="314" y="562" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">ConcurrencyStamp</text>
+   <text x="314" y="573" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">PhoneNumber</text>
+   <text x="314" y="584" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">PhoneNumberConfirmed</text>
+   <text x="314" y="595" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">TwoFactorEnabled</text>
+   <text x="314" y="606" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">LockoutEnd</text>
+   <text x="314" y="617" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">LockoutEnabled</text>
+   <text x="314" y="628" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">AccessFailedCount</text>
+   <text x="422" y="452" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">varchar(255)</text>
+   <text x="422" y="463" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">longtext</text>
+   <text x="422" y="474" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">int</text>
+   <text x="422" y="485" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(256)</text>
+   <text x="422" y="496" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(256)</text>
+   <text x="422" y="507" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(256)</text>
+   <text x="422" y="518" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(256)</text>
+   <text x="422" y="529" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">tinyint(1)</text>
+   <text x="422" y="540" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">longtext</text>
+   <text x="422" y="551" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">longtext</text>
+   <text x="422" y="562" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">longtext</text>
+   <text x="422" y="573" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">longtext</text>
+   <text x="422" y="584" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">tinyint(1)</text>
+   <text x="422" y="595" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">tinyint(1)</text>
+   <text x="422" y="606" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">datetime(6)</text>
+   <text x="422" y="617" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">tinyint(1)</text>
+   <text x="422" y="628" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">int</text>
+   <text x="490" y="452" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk&gt;</text>
+   <text x="490" y="496" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">&lt;ak&gt;</text>
+   <rect x="2" y="452" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient7" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="2" y="452" fill="url(#Gradient7)" width="207" height="68" stroke="#0080c0" stroke-width="1"/>
+   <text x="105" y="462" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">aspnetusertokens</text>
+   <line x1="2" x2="209" y1="467" y2="467" stroke="#0080c0" stroke-width="1"/>
+   <text x="7" y="477" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">UserId</text>
+   <text x="7" y="488" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">LoginProvider</text>
+   <text x="7" y="499" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">Name</text>
+   <text x="7" y="510" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">Value</text>
+   <text x="80" y="477" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">varchar(255)</text>
+   <text x="80" y="488" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">varchar(128)</text>
+   <text x="80" y="499" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">varchar(128)</text>
+   <text x="80" y="510" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">longtext</text>
+   <text x="148" y="477" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk,fk&gt;</text>
+   <text x="148" y="488" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk&gt;</text>
+   <text x="148" y="499" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk&gt;</text>
+   <rect x="588" y="335" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient8" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="588" y="335" fill="url(#Gradient8)" width="172" height="56" stroke="#0080c0" stroke-width="1"/>
+   <text x="674" y="345" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">classes</text>
+   <line x1="588" x2="760" y1="350" y2="350" stroke="#0080c0" stroke-width="1"/>
+   <text x="593" y="360" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">Id</text>
+   <text x="593" y="371" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">Name</text>
+   <text x="593" y="382" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">DirectorId</text>
+   <text x="651" y="360" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">bigint</text>
+   <text x="651" y="371" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(32)</text>
+   <text x="651" y="382" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(255)</text>
+   <text x="719" y="360" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk&gt;</text>
+   <text x="719" y="382" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">&lt;fk&gt;</text>
+   <rect x="858" y="80" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient9" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="858" y="80" fill="url(#Gradient9)" width="137" height="53" stroke="#0080c0" stroke-width="1"/>
+   <text x="926" y="90" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">configs</text>
+   <line x1="858" x2="995" y1="95" y2="95" stroke="#0080c0" stroke-width="1"/>
+   <text x="863" y="105" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">Type</text>
+   <text x="863" y="116" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">Value</text>
+   <text x="896" y="105" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">varchar(32)</text>
+   <text x="896" y="116" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">longtext</text>
+   <text x="959" y="105" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk&gt;</text>
+   <rect x="408" y="223" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient10" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="408" y="223" fill="url(#Gradient10)" width="178" height="68" stroke="#0080c0" stroke-width="1"/>
+   <text x="497" y="233" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">courses</text>
+   <line x1="408" x2="586" y1="238" y2="238" stroke="#0080c0" stroke-width="1"/>
+   <text x="413" y="248" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">Id</text>
+   <text x="413" y="259" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">Name</text>
+   <text x="413" y="270" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">Description</text>
+   <text x="413" y="281" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">DirectorId</text>
+   <text x="476" y="248" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">bigint</text>
+   <text x="476" y="259" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(32)</text>
+   <text x="476" y="270" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(128)</text>
+   <text x="476" y="281" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(255)</text>
+   <text x="544" y="248" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk&gt;</text>
+   <text x="544" y="281" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">&lt;fk&gt;</text>
+   <rect x="379" y="2" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient11" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="379" y="2" fill="url(#Gradient11)" width="177" height="80" stroke="#0080c0" stroke-width="1"/>
+   <text x="467" y="12" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">lessons</text>
+   <line x1="379" x2="556" y1="17" y2="17" stroke="#0080c0" stroke-width="1"/>
+   <text x="383" y="27" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">Id</text>
+   <text x="383" y="38" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">Name</text>
+   <text x="383" y="49" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">Index</text>
+   <text x="383" y="60" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">Description</text>
+   <text x="383" y="71" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">CourseId</text>
+   <text x="446" y="27" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">bigint</text>
+   <text x="446" y="38" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(32)</text>
+   <text x="446" y="49" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">smallint</text>
+   <text x="446" y="60" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(128)</text>
+   <text x="446" y="71" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">bigint</text>
+   <text x="514" y="27" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk&gt;</text>
+   <text x="514" y="71" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">&lt;fk&gt;</text>
+   <rect x="342" y="717" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient12" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="342" y="717" fill="url(#Gradient12)" width="178" height="80" stroke="#0080c0" stroke-width="1"/>
+   <text x="431" y="727" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">messages</text>
+   <line x1="342" x2="520" y1="732" y2="732" stroke="#0080c0" stroke-width="1"/>
+   <text x="347" y="742" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">Id</text>
+   <text x="347" y="753" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">Content</text>
+   <text x="347" y="764" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">Time</text>
+   <text x="347" y="775" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">SenderId</text>
+   <text x="347" y="786" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">ReceiverId</text>
+   <text x="405" y="742" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">bigint</text>
+   <text x="405" y="753" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(256)</text>
+   <text x="405" y="764" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">datetime(6)</text>
+   <text x="405" y="775" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(255)</text>
+   <text x="405" y="786" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(255)</text>
+   <text x="473" y="742" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk&gt;</text>
+   <text x="473" y="775" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">&lt;fk2&gt;</text>
+   <text x="473" y="786" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">&lt;fk1&gt;</text>
+   <rect x="570" y="130" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient13" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="570" y="130" fill="url(#Gradient13)" width="149" height="53" stroke="#0080c0" stroke-width="1"/>
+   <text x="644" y="140" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">relcourseclasses</text>
+   <line x1="570" x2="719" y1="145" y2="145" stroke="#0080c0" stroke-width="1"/>
+   <text x="575" y="155" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">CourseId</text>
+   <text x="575" y="166" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">ClassId</text>
+   <text x="623" y="155" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">bigint</text>
+   <text x="623" y="166" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">bigint</text>
+   <text x="661" y="155" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk,fk2&gt;</text>
+   <text x="661" y="166" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk,fk1&gt;</text>
+   <rect x="871" y="149" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient14" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="871" y="149" fill="url(#Gradient14)" width="111" height="53" stroke="#0080c0" stroke-width="1"/>
+   <text x="926" y="159" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">relresourcecourses</text>
+   <line x1="871" x2="982" y1="164" y2="164" stroke="#0080c0" stroke-width="1"/>
+   <text x="875" y="174" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">CourseId</text>
+   <text x="875" y="185" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">ResourceId</text>
+   <text x="933" y="174" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">bigint</text>
+   <text x="933" y="185" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">bigint</text>
+   <rect x="167" y="56" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient15" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="167" y="56" fill="url(#Gradient15)" width="172" height="56" stroke="#0080c0" stroke-width="1"/>
+   <text x="253" y="66" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">relresourcelessons</text>
+   <line x1="167" x2="339" y1="71" y2="71" stroke="#0080c0" stroke-width="1"/>
+   <text x="172" y="81" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">LessonId</text>
+   <text x="172" y="92" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">ResourceId</text>
+   <text x="172" y="103" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">Index</text>
+   <text x="230" y="81" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">bigint</text>
+   <text x="230" y="92" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">bigint</text>
+   <text x="230" y="103" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">smallint</text>
+   <text x="278" y="81" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk,fk1&gt;</text>
+   <text x="278" y="92" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk,fk2&gt;</text>
+   <rect x="604" y="456" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient16" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="604" y="456" fill="url(#Gradient16)" width="190" height="54" stroke="#0080c0" stroke-width="1"/>
+   <text x="699" y="466" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">relstudentclasses</text>
+   <line x1="604" x2="794" y1="471" y2="471" stroke="#0080c0" stroke-width="1"/>
+   <text x="609" y="481" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">StudentId</text>
+   <text x="609" y="492" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">ClassId</text>
+   <text x="662" y="481" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">varchar(255)</text>
+   <text x="662" y="492" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">bigint</text>
+   <text x="730" y="481" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk,fk1&gt;</text>
+   <text x="730" y="492" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk,fk2&gt;</text>
+   <rect x="852" y="260" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient17" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="852" y="260" fill="url(#Gradient17)" width="141" height="53" stroke="#0080c0" stroke-width="1"/>
+   <text x="922" y="270" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">relstudentcourses</text>
+   <line x1="852" x2="993" y1="275" y2="275" stroke="#0080c0" stroke-width="1"/>
+   <text x="857" y="285" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">CourseId</text>
+   <text x="857" y="296" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">StudentId</text>
+   <text x="910" y="285" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">bigint</text>
+   <text x="910" y="296" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(255)</text>
+   <rect x="156" y="230" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient18" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="156" y="230" fill="url(#Gradient18)" width="178" height="104" stroke="#0080c0" stroke-width="1"/>
+   <text x="245" y="240" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">resources</text>
+   <line x1="156" x2="334" y1="245" y2="245" stroke="#0080c0" stroke-width="1"/>
+   <text x="161" y="255" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">Id</text>
+   <text x="161" y="266" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">Name</text>
+   <text x="161" y="277" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">Content</text>
+   <text x="161" y="288" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">UploadTime</text>
+   <text x="161" y="299" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">Expired</text>
+   <text x="161" y="310" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">UploaderId</text>
+   <text x="161" y="321" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">ContentType</text>
+   <text x="224" y="255" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">bigint</text>
+   <text x="224" y="266" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(32)</text>
+   <text x="224" y="277" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">longblob</text>
+   <text x="224" y="288" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">datetime(6)</text>
+   <text x="224" y="299" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">datetime(6)</text>
+   <text x="224" y="310" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(255)</text>
+   <text x="224" y="321" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">longtext</text>
+   <text x="292" y="255" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start" text-decoration="underline">&lt;pk&gt;</text>
+   <text x="292" y="310" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">&lt;fk&gt;</text>
+   <rect x="874" y="410" fill="#ffffff" width="0" height="0" stroke="none" stroke-width="0"/>
+   <defs>
+      <linearGradient id="Gradient19" x1="0%" x2="100%" y1="0%" y2="100%" gradientUnits="objectBoundingBox">
+         <stop offset="5%" stop-color="#ffffff"/>
+         <stop offset="95%" stop-color="#b2d6fc"/>
+      </linearGradient>
+   </defs>
+   <rect x="874" y="410" fill="url(#Gradient19)" width="128" height="68" stroke="#0080c0" stroke-width="1"/>
+   <text x="938" y="420" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="middle">resourcesummaries</text>
+   <line x1="874" x2="1002" y1="425" y2="425" stroke="#0080c0" stroke-width="1"/>
+   <text x="878" y="435" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">Id</text>
+   <text x="878" y="446" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">Name</text>
+   <text x="878" y="457" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">Uploader</text>
+   <text x="878" y="468" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">Size</text>
+   <text x="926" y="435" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">bigint</text>
+   <text x="926" y="446" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">varchar(32)</text>
+   <text x="926" y="457" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">longtext</text>
+   <text x="926" y="468" fill="#000000" font-size="10" font-family="'Arial Unicode MS','新宋体'" text-anchor="start">bigint</text>
+</svg>

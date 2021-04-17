@@ -27,6 +27,11 @@ export class AccountService
     return this.userSubject?.value;
   }
 
+  get isManager(): boolean
+  {
+    return this.user?.role === UserRole.Administrator;
+  }
+
   get isTeacher(): boolean
   {
     return this.user?.role === UserRole.Teacher;

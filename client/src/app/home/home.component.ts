@@ -17,18 +17,9 @@ import {Observable} from 'rxjs';
 })
 export class HomeComponent implements OnInit
 {
-  public resources: Resource[] = [
-    {name: 'foo', id: '0', size: 100, uploader: 'fool'},
-    {name: 'bar', id: '1', size: 1000000, uploader: 'fool'}
-  ];
-  public courses: ElementSummary[] = [
-    {name: 'foo', id: '0'},
-    {name: 'bar', id: '1'}
-  ];
-  public classes: ElementSummary[] = [
-    {name: 'foo', id: '0'},
-    {name: 'bar', id: '1'}
-  ];
+  public resources: Resource[] = [];
+  public courses: ElementSummary[] = [];
+  public classes: ElementSummary[] = [];
 
   constructor(public vh: ValueHelperService,
               public res: ResourceService,
@@ -49,7 +40,7 @@ export class HomeComponent implements OnInit
   {
     this.ele.getAll('课程').subscribe(c => this.courses = c);
     this.ele.getAll('班级').subscribe(c => this.classes = c);
-    if (this.account.isTeacher)
+    if (true)
     {
       this.res.getAll().subscribe(r => this.resources = r);
     }

@@ -2,12 +2,6 @@
 
 ## 页面
 
-- Home：我的课程，我的班级，我的资源
-- Course:basic_info, 面向班级，课时
-- Lesson：basic_info，资源
-- Class:班级的课程，班级成员
-
-
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.1.
 
 ## Development server

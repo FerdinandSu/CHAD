@@ -1,3 +1,4 @@
 ﻿username,name,initialPassword,role
-tu1,测试教师,tu1pwd,1
-tu2,测试学生,tu2pwd,0
+tu1,张三老师,tu1pwd,1
+tu2,李四,tu2pwd,0
+tu3,王五,tu3pwd,0

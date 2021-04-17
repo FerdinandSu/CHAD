@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Design;
 
 namespace Chad.Data
 {
-    public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<ChadDb>
+    /*public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<ChadDb>
     {
         public ChadDb CreateDbContext(string[] args)
         {
@@ -12,5 +12,5 @@ namespace Chad.Data
 
             return new ChadDb(optionsBuilder.Options);
         }
-    }
+    }*/
 }

@@ -11,14 +11,28 @@ namespace Chad.Data
         public ChadDb(DbContextOptions<ChadDb> options) : base(options)
         {
         }
+
+
         protected override void OnModelCreating(ModelBuilder builder)
         {
             builder.Entity<DbMessage>()
                 .Property(msg => msg.Time)
-                .HasDefaultValueSql("(datetime('now', 'localtime'))");
+                .HasDefaultValueSql("CURRENT_TIMESTAMP(6)");
             builder.Entity<DbResource>()
                 .Property(res=>res.UploadTime)
-                .HasDefaultValueSql("(datetime('now', 'localtime'))");
+                .HasDefaultValueSql("CURRENT_TIMESTAMP(6)");
+
+            builder.Entity<KlResourceSummary>()
+                .HasNoKey()
+                .ToView(nameof(ResourceSummaries));
+
+            builder.Entity<KlRelStudentCourse>()
+                .HasNoKey()
+                .ToView(nameof(RelStudentCourses));
+
+            builder.Entity<KlRelResourceCourse>()
+                .HasNoKey()
+                .ToView(nameof(RelResourceCourses));
 
             builder.Entity<RelCourseClass>()
                 .HasKey(r => new {r.ClassId, r.CourseId});
@@ -30,6 +44,10 @@ namespace Chad.Data
                 .HasKey(r => new { r.StudentId, r.ClassId });
             base.OnModelCreating(builder);
         }
+
+        public DbSet<KlRelResourceCourse> RelResourceCourses { get; set; } = null!;
+        public DbSet<KlResourceSummary> ResourceSummaries { get; set; } = null!;
+        public DbSet<KlRelStudentCourse> RelStudentCourses { get; set; } = null!;
         public DbSet<RelResourceLesson> RelResourceLessons { get; set; } = null!;
         public DbSet<RelCourseClass> RelCourseClasses { get; set; } = null!;
         public DbSet<RelStudentClass> RelStudentClasses { get; set; } = null!;

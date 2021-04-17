@@ -24,8 +24,7 @@ namespace Chad.Migrations
                 {
                     Id = table.Column<string>("TEXT", nullable: false),
                     FriendlyName = table.Column<string>("TEXT", nullable: false),
-                    Role = table.Column<byte>("INTEGER", nullable: false),
-                    Gender = table.Column<byte>("INTEGER", nullable: false),
+                    Role = table.Column<int>("INTEGER", nullable: false),
                     UserName = table.Column<string>("TEXT", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>("TEXT", maxLength: 256, nullable: true),
                     Email = table.Column<string>("TEXT", maxLength: 256, nullable: true),
@@ -159,6 +158,26 @@ namespace Chad.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                "Classes",
+                table => new
+                {
+                    Id = table.Column<long>("INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    Name = table.Column<string>("TEXT", maxLength: 32, nullable: false),
+                    DirectorId = table.Column<string>("TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Classes", x => x.Id);
+                    table.ForeignKey(
+                        "FK_Classes_AspNetUsers_DirectorId",
+                        x => x.DirectorId,
+                        "AspNetUsers",
+                        "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 "Courses",
                 table => new
                 {
@@ -166,39 +185,17 @@ namespace Chad.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>("TEXT", maxLength: 32, nullable: false),
                     Description = table.Column<string>("TEXT", maxLength: 128, nullable: false),
-                    DirectorId = table.Column<Guid>("TEXT", nullable: false),
-                    DirectorId1 = table.Column<string>("TEXT", nullable: true)
+                    DirectorId = table.Column<string>("TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Courses", x => x.Id);
                     table.ForeignKey(
-                        "FK_Courses_AspNetUsers_DirectorId1",
-                        x => x.DirectorId1,
+                        "FK_Courses_AspNetUsers_DirectorId",
+                        x => x.DirectorId,
                         "AspNetUsers",
                         "Id",
-                        onDelete: ReferentialAction.Restrict);
-                });
-
-            migrationBuilder.CreateTable(
-                "DbClass",
-                table => new
-                {
-                    Id = table.Column<long>("INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    Name = table.Column<string>("TEXT", maxLength: 32, nullable: false),
-                    DirectorId = table.Column<Guid>("TEXT", nullable: false),
-                    DirectorId1 = table.Column<string>("TEXT", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_DbClass", x => x.Id);
-                    table.ForeignKey(
-                        "FK_DbClass_AspNetUsers_DirectorId1",
-                        x => x.DirectorId1,
-                        "AspNetUsers",
-                        "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -208,27 +205,25 @@ namespace Chad.Migrations
                     Id = table.Column<long>("INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
                     Content = table.Column<string>("TEXT", maxLength: 256, nullable: false),
-                    Time = table.Column<DateTime>("TEXT", nullable: false),
-                    SenderId1 = table.Column<string>("TEXT", nullable: true),
-                    ReceiverId1 = table.Column<string>("TEXT", nullable: true),
-                    SenderId = table.Column<Guid>("TEXT", nullable: false),
-                    ReceiverId = table.Column<Guid>("TEXT", nullable: false)
+                    Time = table.Column<DateTime>("TEXT", nullable: false, defaultValueSql: "CURRENT_TIMESTAMP"),
+                    SenderId = table.Column<string>("TEXT", nullable: false),
+                    ReceiverId = table.Column<string>("TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Messages", x => x.Id);
                     table.ForeignKey(
-                        "FK_Messages_AspNetUsers_ReceiverId1",
-                        x => x.ReceiverId1,
+                        "FK_Messages_AspNetUsers_ReceiverId",
+                        x => x.ReceiverId,
                         "AspNetUsers",
                         "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        "FK_Messages_AspNetUsers_SenderId1",
-                        x => x.SenderId1,
+                        "FK_Messages_AspNetUsers_SenderId",
+                        x => x.SenderId,
                         "AspNetUsers",
                         "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -239,24 +234,48 @@ namespace Chad.Migrations
                         .Annotation("Sqlite:Autoincrement", true),
                     Name = table.Column<string>("TEXT", maxLength: 32, nullable: false),
                     Content = table.Column<byte[]>("BLOB", maxLength: 4194304, nullable: false),
-                    UploadTime = table.Column<DateTime>("TEXT", nullable: false),
+                    UploadTime = table.Column<DateTime>("TEXT", nullable: false, defaultValueSql: "CURRENT_TIMESTAMP"),
                     Expired = table.Column<DateTime>("TEXT", nullable: false),
-                    UploaderId1 = table.Column<string>("TEXT", nullable: true),
-                    UploaderId = table.Column<Guid>("TEXT", nullable: false)
+                    UploaderId = table.Column<string>("TEXT", nullable: false),
+                    ContentType = table.Column<string>("TEXT", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Resources", x => x.Id);
                     table.ForeignKey(
-                        "FK_Resources_AspNetUsers_UploaderId1",
-                        x => x.UploaderId1,
+                        "FK_Resources_AspNetUsers_UploaderId",
+                        x => x.UploaderId,
                         "AspNetUsers",
                         "Id",
-                        onDelete: ReferentialAction.Restrict);
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                "DbLesson",
+                "RelStudentClasses",
+                table => new
+                {
+                    StudentId = table.Column<string>("TEXT", nullable: false),
+                    ClassId = table.Column<long>("INTEGER", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RelStudentClasses", x => new {x.StudentId, x.ClassId});
+                    table.ForeignKey(
+                        "FK_RelStudentClasses_AspNetUsers_StudentId",
+                        x => x.StudentId,
+                        "AspNetUsers",
+                        "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        "FK_RelStudentClasses_Classes_ClassId",
+                        x => x.ClassId,
+                        "Classes",
+                        "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                "Lessons",
                 table => new
                 {
                     Id = table.Column<long>("INTEGER", nullable: false)
@@ -268,9 +287,9 @@ namespace Chad.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_DbLesson", x => x.Id);
+                    table.PrimaryKey("PK_Lessons", x => x.Id);
                     table.ForeignKey(
-                        "FK_DbLesson_Courses_CourseId",
+                        "FK_Lessons_Courses_CourseId",
                         x => x.CourseId,
                         "Courses",
                         "Id",
@@ -278,79 +297,48 @@ namespace Chad.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                "RelCourseClass",
+                "RelCourseClasses",
                 table => new
                 {
-                    Id = table.Column<long>("INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
                     CourseId = table.Column<long>("INTEGER", nullable: false),
                     ClassId = table.Column<long>("INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_RelCourseClass", x => x.Id);
+                    table.PrimaryKey("PK_RelCourseClasses", x => new {x.ClassId, x.CourseId});
                     table.ForeignKey(
-                        "FK_RelCourseClass_Courses_CourseId",
+                        "FK_RelCourseClasses_Classes_ClassId",
+                        x => x.ClassId,
+                        "Classes",
+                        "Id",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        "FK_RelCourseClasses_Courses_CourseId",
                         x => x.CourseId,
                         "Courses",
                         "Id",
                         onDelete: ReferentialAction.Cascade);
-                    table.ForeignKey(
-                        "FK_RelCourseClass_DbClass_ClassId",
-                        x => x.ClassId,
-                        "DbClass",
-                        "Id",
-                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
-                "RelStudentClass",
+                "RelResourceLessons",
                 table => new
                 {
-                    Id = table.Column<long>("INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    StudentId1 = table.Column<string>("TEXT", nullable: true),
-                    StudentId = table.Column<Guid>("TEXT", nullable: false),
-                    ClassId = table.Column<long>("INTEGER", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_RelStudentClass", x => x.Id);
-                    table.ForeignKey(
-                        "FK_RelStudentClass_AspNetUsers_StudentId1",
-                        x => x.StudentId1,
-                        "AspNetUsers",
-                        "Id",
-                        onDelete: ReferentialAction.Restrict);
-                    table.ForeignKey(
-                        "FK_RelStudentClass_DbClass_ClassId",
-                        x => x.ClassId,
-                        "DbClass",
-                        "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
-                "RelResourceLesson",
-                table => new
-                {
-                    Id = table.Column<long>("INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
                     LessonId = table.Column<long>("INTEGER", nullable: false),
                     ResourceId = table.Column<long>("INTEGER", nullable: false),
                     Index = table.Column<ushort>("INTEGER", nullable: false)
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_RelResourceLesson", x => x.Id);
+                    table.PrimaryKey("PK_RelResourceLessons", x => new {x.ResourceId, x.LessonId});
                     table.ForeignKey(
-                        "FK_RelResourceLesson_DbLesson_LessonId",
+                        "FK_RelResourceLessons_Lessons_LessonId",
                         x => x.LessonId,
-                        "DbLesson",
+                        "Lessons",
                         "Id",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
-                        "FK_RelResourceLesson_Resources_ResourceId",
+                        "FK_RelResourceLessons_Resources_ResourceId",
                         x => x.ResourceId,
                         "Resources",
                         "Id",
@@ -395,24 +383,24 @@ namespace Chad.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                "IX_Courses_DirectorId1",
+                "IX_Classes_DirectorId",
+                "Classes",
+                "DirectorId");
+
+            migrationBuilder.CreateIndex(
+                "IX_Courses_DirectorId",
                 "Courses",
-                "DirectorId1");
+                "DirectorId");
 
             migrationBuilder.CreateIndex(
-                "IX_DbClass_DirectorId1",
-                "DbClass",
-                "DirectorId1");
-
-            migrationBuilder.CreateIndex(
-                "IX_DbLesson_CourseId",
-                "DbLesson",
+                "IX_Lessons_CourseId",
+                "Lessons",
                 "CourseId");
 
             migrationBuilder.CreateIndex(
-                "IX_Messages_ReceiverId1",
+                "IX_Messages_ReceiverId",
                 "Messages",
-                "ReceiverId1");
+                "ReceiverId");
 
             migrationBuilder.CreateIndex(
                 "IX_Messages_SenderId_ReceiverId",
@@ -420,44 +408,29 @@ namespace Chad.Migrations
                 new[] {"SenderId", "ReceiverId"});
 
             migrationBuilder.CreateIndex(
-                "IX_Messages_SenderId1",
-                "Messages",
-                "SenderId1");
-
-            migrationBuilder.CreateIndex(
-                "IX_RelCourseClass_ClassId_CourseId",
-                "RelCourseClass",
+                "IX_RelCourseClasses_ClassId_CourseId",
+                "RelCourseClasses",
                 new[] {"ClassId", "CourseId"});
 
             migrationBuilder.CreateIndex(
-                "IX_RelCourseClass_CourseId",
-                "RelCourseClass",
+                "IX_RelCourseClasses_CourseId",
+                "RelCourseClasses",
                 "CourseId");
 
             migrationBuilder.CreateIndex(
-                "IX_RelResourceLesson_LessonId_ResourceId",
-                "RelResourceLesson",
+                "IX_RelResourceLessons_LessonId_ResourceId",
+                "RelResourceLessons",
                 new[] {"LessonId", "ResourceId"});
 
             migrationBuilder.CreateIndex(
-                "IX_RelResourceLesson_ResourceId",
-                "RelResourceLesson",
-                "ResourceId");
-
-            migrationBuilder.CreateIndex(
-                "IX_RelStudentClass_ClassId_StudentId",
-                "RelStudentClass",
+                "IX_RelStudentClasses_ClassId_StudentId",
+                "RelStudentClasses",
                 new[] {"ClassId", "StudentId"});
 
             migrationBuilder.CreateIndex(
-                "IX_RelStudentClass_StudentId1",
-                "RelStudentClass",
-                "StudentId1");
-
-            migrationBuilder.CreateIndex(
-                "IX_Resources_UploaderId1",
+                "IX_Resources_UploaderId",
                 "Resources",
-                "UploaderId1");
+                "UploaderId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -484,25 +457,25 @@ namespace Chad.Migrations
                 "Messages");
 
             migrationBuilder.DropTable(
-                "RelCourseClass");
+                "RelCourseClasses");
 
             migrationBuilder.DropTable(
-                "RelResourceLesson");
+                "RelResourceLessons");
 
             migrationBuilder.DropTable(
-                "RelStudentClass");
+                "RelStudentClasses");
 
             migrationBuilder.DropTable(
                 "AspNetRoles");
 
             migrationBuilder.DropTable(
-                "DbLesson");
+                "Lessons");
 
             migrationBuilder.DropTable(
                 "Resources");
 
             migrationBuilder.DropTable(
-                "DbClass");
+                "Classes");
 
             migrationBuilder.DropTable(
                 "Courses");

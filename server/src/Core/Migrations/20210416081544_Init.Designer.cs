@@ -9,8 +9,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Chad.Migrations
 {
     [DbContext(typeof(ChadDb))]
-    [Migration("20210412133119_RemovedGender")]
-    partial class RemovedGender
+    [Migration("20210416081544_Init")]
+    partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -24,10 +24,8 @@ namespace Chad.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<Guid>("DirectorId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("DirectorId1")
+                    b.Property<string>("DirectorId")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
@@ -37,9 +35,9 @@ namespace Chad.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DirectorId1");
+                    b.HasIndex("DirectorId");
 
-                    b.ToTable("DbClass");
+                    b.ToTable("Classes");
                 });
 
             modelBuilder.Entity("Chad.Data.DbConfig", b =>
@@ -67,10 +65,8 @@ namespace Chad.Migrations
                         .HasMaxLength(128)
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid>("DirectorId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("DirectorId1")
+                    b.Property<string>("DirectorId")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<string>("Name")
@@ -80,7 +76,7 @@ namespace Chad.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("DirectorId1");
+                    b.HasIndex("DirectorId");
 
                     b.ToTable("Courses");
                 });
@@ -111,7 +107,7 @@ namespace Chad.Migrations
 
                     b.HasIndex("CourseId");
 
-                    b.ToTable("DbLesson");
+                    b.ToTable("Lessons");
                 });
 
             modelBuilder.Entity("Chad.Data.DbMessage", b =>
@@ -125,27 +121,22 @@ namespace Chad.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("TEXT");
 
-                    b.Property<Guid>("ReceiverId")
+                    b.Property<string>("ReceiverId")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<string>("ReceiverId1")
-                        .HasColumnType("TEXT");
-
-                    b.Property<Guid>("SenderId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("SenderId1")
+                    b.Property<string>("SenderId")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.Property<DateTime>("Time")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("TEXT")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ReceiverId1");
-
-                    b.HasIndex("SenderId1");
+                    b.HasIndex("ReceiverId");
 
                     b.HasIndex("SenderId", "ReceiverId");
 
@@ -163,6 +154,10 @@ namespace Chad.Migrations
                         .HasMaxLength(4194304)
                         .HasColumnType("BLOB");
 
+                    b.Property<string>("ContentType")
+                        .IsRequired()
+                        .HasColumnType("TEXT");
+
                     b.Property<DateTime>("Expired")
                         .HasColumnType("TEXT");
 
@@ -173,17 +168,16 @@ namespace Chad.Migrations
 
                     b.Property<DateTime>("UploadTime")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("TEXT")
+                        .HasDefaultValueSql("CURRENT_TIMESTAMP");
 
-                    b.Property<Guid>("UploaderId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("UploaderId1")
+                    b.Property<string>("UploaderId")
+                        .IsRequired()
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("UploaderId1");
+                    b.HasIndex("UploaderId");
 
                     b.ToTable("Resources");
                 });
@@ -234,7 +228,7 @@ namespace Chad.Migrations
                     b.Property<bool>("PhoneNumberConfirmed")
                         .HasColumnType("INTEGER");
 
-                    b.Property<byte>("Role")
+                    b.Property<int>("Role")
                         .HasColumnType("INTEGER");
 
                     b.Property<string>("SecurityStamp")
@@ -261,71 +255,52 @@ namespace Chad.Migrations
 
             modelBuilder.Entity("Chad.Data.RelCourseClass", b =>
                 {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
                     b.Property<long>("ClassId")
                         .HasColumnType("INTEGER");
 
                     b.Property<long>("CourseId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("Id");
+                    b.HasKey("ClassId", "CourseId");
 
                     b.HasIndex("CourseId");
 
                     b.HasIndex("ClassId", "CourseId");
 
-                    b.ToTable("RelCourseClass");
+                    b.ToTable("RelCourseClasses");
                 });
 
             modelBuilder.Entity("Chad.Data.RelResourceLesson", b =>
                 {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
-
-                    b.Property<ushort>("Index")
+                    b.Property<long>("ResourceId")
                         .HasColumnType("INTEGER");
 
                     b.Property<long>("LessonId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<long>("ResourceId")
+                    b.Property<ushort>("Index")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("Id");
-
-                    b.HasIndex("ResourceId");
+                    b.HasKey("ResourceId", "LessonId");
 
                     b.HasIndex("LessonId", "ResourceId");
 
-                    b.ToTable("RelResourceLesson");
+                    b.ToTable("RelResourceLessons");
                 });
 
             modelBuilder.Entity("Chad.Data.RelStudentClass", b =>
                 {
-                    b.Property<long>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                    b.Property<string>("StudentId")
+                        .HasColumnType("TEXT");
 
                     b.Property<long>("ClassId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<Guid>("StudentId")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("StudentId1")
-                        .HasColumnType("TEXT");
-
-                    b.HasKey("Id");
-
-                    b.HasIndex("StudentId1");
+                    b.HasKey("StudentId", "ClassId");
 
                     b.HasIndex("ClassId", "StudentId");
 
-                    b.ToTable("RelStudentClass");
+                    b.ToTable("RelStudentClasses");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRole", b =>
@@ -460,7 +435,9 @@ namespace Chad.Migrations
                 {
                     b.HasOne("Chad.Data.DbUser", "Director")
                         .WithMany()
-                        .HasForeignKey("DirectorId1");
+                        .HasForeignKey("DirectorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Director");
                 });
@@ -469,7 +446,9 @@ namespace Chad.Migrations
                 {
                     b.HasOne("Chad.Data.DbUser", "Director")
                         .WithMany()
-                        .HasForeignKey("DirectorId1");
+                        .HasForeignKey("DirectorId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Director");
                 });
@@ -489,11 +468,15 @@ namespace Chad.Migrations
                 {
                     b.HasOne("Chad.Data.DbUser", "Receiver")
                         .WithMany()
-                        .HasForeignKey("ReceiverId1");
+                        .HasForeignKey("ReceiverId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.HasOne("Chad.Data.DbUser", "Sender")
                         .WithMany()
-                        .HasForeignKey("SenderId1");
+                        .HasForeignKey("SenderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Receiver");
 
@@ -504,7 +487,9 @@ namespace Chad.Migrations
                 {
                     b.HasOne("Chad.Data.DbUser", "Uploader")
                         .WithMany()
-                        .HasForeignKey("UploaderId1");
+                        .HasForeignKey("UploaderId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Uploader");
                 });
@@ -557,7 +542,9 @@ namespace Chad.Migrations
 
                     b.HasOne("Chad.Data.DbUser", "Student")
                         .WithMany()
-                        .HasForeignKey("StudentId1");
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("Class");
 

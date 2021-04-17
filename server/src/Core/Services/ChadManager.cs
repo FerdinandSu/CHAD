@@ -114,7 +114,19 @@ namespace Chad.Services
                         Size = r.Content.Length
                     }
                 , cru =>
-                    throw new InvalidOperationException("不支持学生上传资源。")
+                    from res in Db.ResourceSummaries
+                    join resCrs in Db.RelResourceCourses
+                        on res.Id equals resCrs.ResourceId
+                    join stuCrs in Db.RelStudentCourses
+                        on resCrs.CourseId equals stuCrs.CourseId
+                    where stuCrs.StudentId == cru.Username
+                    select new Resource
+                    {
+                        Id = res.Id,
+                        Name = res.Name,
+                        Uploader = res.Uploader,
+                        Size = res.Size
+                    }
 
             );
         }
@@ -241,17 +253,15 @@ namespace Chad.Services
         {
             var qResource =
                 from rel in Db.RelResourceLessons
-                join res in Db.Resources
+                join res in Db.ResourceSummaries
                     on rel.ResourceId equals res.Id
-                join upl in Db.Users
-                    on res.UploaderId equals upl.Id
                 where rel.LessonId == id
                 select new Resource
                 {
                     Id = res.Id,
                     Name = res.Name,
-                    Uploader = upl.FriendlyName,
-                    Size = res.Content.Length
+                    Uploader = res.Uploader,
+                    Size = res.Size
                 };
             var resources = await qResource.ToArrayAsync();
             var q =
@@ -305,7 +315,7 @@ namespace Chad.Services
             catch (Exception e)
             {
                 Logger.LogError(e.Message);
-                throw;
+                
                 return null;
             }
         }
@@ -326,7 +336,7 @@ namespace Chad.Services
             catch (Exception e)
             {
                 Logger.LogError(e.Message);
-                throw;
+                
                 return false;
             }
         }
@@ -369,7 +379,7 @@ namespace Chad.Services
             catch (Exception e)
             {
                 Logger.LogError(e.Message);
-                throw;
+                
                 return false;
             }
         }
@@ -387,7 +397,7 @@ namespace Chad.Services
             catch (Exception e)
             {
                 Logger.LogError(e.Message);
-                throw;
+                
                 return false;
             }
         }
@@ -409,7 +419,7 @@ namespace Chad.Services
             catch (Exception e)
             {
                 Logger.LogError(e.Message);
-                throw;
+                
                 return false;
             }
         }
@@ -430,7 +440,7 @@ namespace Chad.Services
             catch (Exception e)
             {
                 Logger.LogError(e.Message);
-                throw;
+                
                 return false;
             }
         }
@@ -500,7 +510,7 @@ namespace Chad.Services
             catch (Exception e)
             {
                 Logger.LogError(e.Message);
-                throw;
+                
                 return false;
             }
         }
@@ -521,7 +531,7 @@ namespace Chad.Services
             catch (Exception e)
             {
                 Logger.LogError(e.Message);
-                throw;
+                
                 return false;
             }
         }

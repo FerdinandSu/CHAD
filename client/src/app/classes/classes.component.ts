@@ -18,12 +18,10 @@ export class ClassesComponent implements OnInit
 {
 
   theClass: Class = {
-    id: '0',
-    name: 'class',
-    director: {name: '🐉🔒', username: 'dragon-lock'},
-    students: [
-      {name: 'ywz', username: 'ywz'}
-    ]
+    id: '',
+    name: '',
+    director: {name: '', username: ''},
+    students: [ ]
   };
 
   constructor(private ele: ElementService,

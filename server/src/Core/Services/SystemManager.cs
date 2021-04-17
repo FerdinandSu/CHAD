@@ -118,7 +118,7 @@ namespace Chad.Services
         private static async Task LoadIncludedUsersAsync(string? file, IServiceProvider serviceProvider)
         {
             var accountManager = serviceProvider.GetRequiredService<AccountManager>();
-            if (!File.Exists(file)) return;
+            if (file is null|| !File.Exists(file)) return;
             foreach (var u in new ChoCSVReader<ManagedGeneratingUser>(Path.GetFullPath(file)).WithFirstLineHeader())
                 await accountManager.CreateAsync(u);
         }
