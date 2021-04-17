@@ -75,4 +75,24 @@ export class CoursesComponent implements OnInit
           .subscribe(() => this.refresh());
       });
   }
+
+  excludeClass(cls: ElementSummary): void
+  {
+    this.chad.excludeClass(this.course.id, cls)
+      .subscribe(() =>
+      {
+        this.refresh();
+        this.msg.addOk();
+      });
+  }
+
+  deleteLesson(cls: ElementSummary): void
+  {
+    this.chad.deleteLesson(cls.id)
+      .subscribe(() =>
+      {
+        this.refresh();
+        this.msg.addOk();
+      });
+  }
 }

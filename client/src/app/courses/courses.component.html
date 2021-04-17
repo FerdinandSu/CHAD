@@ -32,7 +32,7 @@
               <a [routerLink]="'/Lessons/'+cls.id">{{cls.name}}</a>
               <button *ngIf="acc.canManage(course.director.username)"
                       class="btn btn-danger float-right"
-                      (click)="chad.deleteLesson(cls.id)">删除
+                      (click)="deleteLesson(cls)">删除
               </button>
             </li>
           </ul>
@@ -59,7 +59,7 @@
             <li *ngFor="let cls of course.classes" class="list-group-item">
               <a [routerLink]="'/Classes/'+cls.id">{{cls.name}}</a>
               <button *ngIf="acc.canManage(course.director.username)"
-                      (click)="chad.excludeClass(course.id,cls)"
+                      (click)="excludeClass(cls)"
                       class="btn btn-danger float-right">删除
               </button>
             </li>

@@ -25,7 +25,7 @@ namespace Chad.Services
 
         public async Task DeleteCourseAsync(long id)
         {
-            var r = new DbCourse { Id = id };
+            var r = new DbCourse {Id = id};
             Db.Courses.Attach(r);
             Db.Courses.Remove(r);
             await Db.SaveChangesAsync();
@@ -33,7 +33,7 @@ namespace Chad.Services
 
         public async Task DeleteClassAsync(long id)
         {
-            var r = new DbClass { Id = id };
+            var r = new DbClass {Id = id};
             Db.Classes.Attach(r);
             Db.Classes.Remove(r);
             await Db.SaveChangesAsync();
@@ -41,7 +41,7 @@ namespace Chad.Services
 
         public async Task DeleteResourceAsync(long id)
         {
-            var r = new DbResource { Id = id };
+            var r = new DbResource {Id = id};
             Db.Resources.Attach(r);
             Db.Resources.Remove(r);
             await Db.SaveChangesAsync();
@@ -61,7 +61,7 @@ namespace Chad.Services
             };
             await Db.Resources.AddAsync(ir);
             await Db.SaveChangesAsync();
-            return new Resource()
+            return new Resource
             {
                 Uploader = u.FriendlyName,
                 Id = ir.Id,
@@ -95,9 +95,9 @@ namespace Chad.Services
         private IQueryable<long> GetCourseForStudent(string stuName)
         {
             return from courseClass in Db.RelCourseClasses
-                   join classId in GetClassForStudent(stuName)
-                       on courseClass.ClassId equals classId
-                   select courseClass.CourseId;
+                join classId in GetClassForStudent(stuName)
+                    on courseClass.ClassId equals classId
+                select courseClass.CourseId;
         }
 
         public async ValueTask<Resource[]> GetResourcesAsync()
@@ -127,7 +127,6 @@ namespace Chad.Services
                         Uploader = res.Uploader,
                         Size = res.Size
                     }
-
             );
         }
 
@@ -157,7 +156,7 @@ namespace Chad.Services
                     },
                 cru =>
 
-                #region StudentCourse
+                    #region StudentCourse
 
                     from r in Db.Courses
                     join id in GetCourseForStudent(cru.Username)
@@ -169,7 +168,7 @@ namespace Chad.Services
                         Name = r.Name
                     }
 
-                    #endregion
+                #endregion
 
             );
         }
@@ -195,7 +194,7 @@ namespace Chad.Services
                 select new Class
                 {
                     Id = id,
-                    Director = new()
+                    Director = new UserSummary
                     {
                         Username = director.Id,
                         Name = director.FriendlyName
@@ -237,7 +236,7 @@ namespace Chad.Services
                 {
                     Id = id,
                     Description = c.Description,
-                    Director = new()
+                    Director = new UserSummary
                     {
                         Name = director.FriendlyName,
                         Username = c.DirectorId
@@ -273,12 +272,11 @@ namespace Chad.Services
                 {
                     Name = l.Name,
                     Id = l.Id,
-                    Course = new()
+                    Course = new ElementSummary
                     {
                         Id = c.Id,
                         Name = c.Name
-                    }
-                    ,
+                    },
                     Description = l.Description,
                     Resources = resources
                 };
@@ -287,7 +285,7 @@ namespace Chad.Services
 
         public async ValueTask DeleteLessonAsync(long id)
         {
-            var r = new DbLesson { Id = id };
+            var r = new DbLesson {Id = id};
             Db.Lessons.Attach(r);
             Db.Lessons.Remove(r);
             await Db.SaveChangesAsync();
@@ -306,7 +304,7 @@ namespace Chad.Services
                 };
                 await Db.Lessons.AddAsync(ir);
                 await Db.SaveChangesAsync();
-                return new ElementSummary()
+                return new ElementSummary
                 {
                     Id = ir.Id,
                     Name = ir.Name
@@ -315,7 +313,7 @@ namespace Chad.Services
             catch (Exception e)
             {
                 Logger.LogError(e.Message);
-                
+
                 return null;
             }
         }
@@ -336,7 +334,7 @@ namespace Chad.Services
             catch (Exception e)
             {
                 Logger.LogError(e.Message);
-                
+
                 return false;
             }
         }
@@ -370,7 +368,7 @@ namespace Chad.Services
         {
             try
             {
-                var rel = new RelCourseClass { ClassId = classId, CourseId = courseId };
+                var rel = new RelCourseClass {ClassId = classId, CourseId = courseId};
                 Db.RelCourseClasses.Attach(rel);
                 Db.RelCourseClasses.Remove(rel);
                 await Db.SaveChangesAsync();
@@ -379,7 +377,7 @@ namespace Chad.Services
             catch (Exception e)
             {
                 Logger.LogError(e.Message);
-                
+
                 return false;
             }
         }
@@ -388,7 +386,7 @@ namespace Chad.Services
         {
             try
             {
-                var rel = new RelStudentClass { ClassId = classId, StudentId = username };
+                var rel = new RelStudentClass {ClassId = classId, StudentId = username};
                 Db.RelStudentClasses.Attach(rel);
                 Db.RelStudentClasses.Remove(rel);
                 await Db.SaveChangesAsync();
@@ -397,7 +395,7 @@ namespace Chad.Services
             catch (Exception e)
             {
                 Logger.LogError(e.Message);
-                
+
                 return false;
             }
         }
@@ -406,7 +404,7 @@ namespace Chad.Services
         {
             try
             {
-                var rel = new RelResourceLesson { ResourceId = resId, LessonId = lessonId };
+                var rel = new RelResourceLesson {ResourceId = resId, LessonId = lessonId};
                 Db.Attach(rel);
                 /*var rel =
                     Db.RelResourceLessons.FirstOrDefaultAsync(
@@ -419,7 +417,7 @@ namespace Chad.Services
             catch (Exception e)
             {
                 Logger.LogError(e.Message);
-                
+
                 return false;
             }
         }
@@ -440,7 +438,7 @@ namespace Chad.Services
             catch (Exception e)
             {
                 Logger.LogError(e.Message);
-                
+
                 return false;
             }
         }
@@ -452,15 +450,11 @@ namespace Chad.Services
             if (u is null) return Array.Empty<ChatMessage>();
             var q =
                 from msg in Db.Messages
-                join sender in (
-                        from user in Db.Users
-                        select new { user.Id, Name = user.FriendlyName }
-                        )
+                join sender in from user in Db.Users
+                    select new {user.Id, Name = user.FriendlyName}
                     on msg.SenderId equals sender.Id
-                join receiver in (
-                        from user in Db.Users
-                        select new { user.Id, Name = user.FriendlyName }
-                    )
+                join receiver in from user in Db.Users
+                    select new {user.Id, Name = user.FriendlyName}
                     on msg.ReceiverId equals receiver.Id
                 where msg.SenderId == u.Username
                       || msg.ReceiverId == u.Username
@@ -471,7 +465,7 @@ namespace Chad.Services
                         Content = msg.Content,
                         FromCurrentUser = true,
                         Time = msg.Time.ToString(CultureInfo.CurrentCulture),
-                        Remote = new()
+                        Remote = new UserSummary
                         {
                             Name = receiver.Name,
                             Username = receiver.Id
@@ -482,7 +476,7 @@ namespace Chad.Services
                         Content = msg.Content,
                         FromCurrentUser = false,
                         Time = msg.Time.ToString(CultureInfo.CurrentCulture),
-                        Remote = new()
+                        Remote = new UserSummary()
                         {
                             Name = sender.Name,
                             Username = sender.Id
@@ -510,7 +504,7 @@ namespace Chad.Services
             catch (Exception e)
             {
                 Logger.LogError(e.Message);
-                
+
                 return false;
             }
         }
@@ -531,7 +525,7 @@ namespace Chad.Services
             catch (Exception e)
             {
                 Logger.LogError(e.Message);
-                
+
                 return false;
             }
         }
@@ -548,7 +542,7 @@ namespace Chad.Services
             };
             await Db.Courses.AddAsync(ir);
             await Db.SaveChangesAsync();
-            return new ElementSummary()
+            return new ElementSummary
             {
                 Id = ir.Id,
                 Name = ir.Name
@@ -566,7 +560,7 @@ namespace Chad.Services
             };
             await Db.Classes.AddAsync(ir);
             await Db.SaveChangesAsync();
-            return new ElementSummary()
+            return new ElementSummary
             {
                 Id = ir.Id,
                 Name = ir.Name

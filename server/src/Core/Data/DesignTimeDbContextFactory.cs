@@ -1,7 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Design;
-
-namespace Chad.Data
+﻿namespace Chad.Data
 {
     /*public class DesignTimeDbContextFactory : IDesignTimeDbContextFactory<ChadDb>
     {

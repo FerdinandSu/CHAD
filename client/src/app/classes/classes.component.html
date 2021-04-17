@@ -29,11 +29,11 @@
               {{cls.name}}
               <button *ngIf="acc.canManage(theClass.director.username)"
                       class="btn btn-danger float-right"
-                      (click)="chad.excludeStudent(theClass.id,cls)">删除
+                      (click)="excludeStudent(cls)">删除
               </button>
             </li>
           </ul>
-          <button *ngIf="acc.canManage(theClass.director.username)" class="btn btn-primary float-left m-3" (click)="addCourse()">新增</button>
+          <button *ngIf="acc.canManage(theClass.director.username)" class="btn btn-primary float-left m-3" (click)="addStudent()">新增</button>
         </div>
       </div>
     </div>

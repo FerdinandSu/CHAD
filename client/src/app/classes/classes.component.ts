@@ -21,7 +21,7 @@ export class ClassesComponent implements OnInit
     id: '',
     name: '',
     director: {name: '', username: ''},
-    students: [ ]
+    students: []
   };
 
   constructor(private ele: ElementService,
@@ -54,13 +54,23 @@ export class ClassesComponent implements OnInit
     }
   }
 
-  addCourse(): void
+  addStudent(): void
   {
     this.um.showSelectDialog(UserRole.Student)
       .subscribe((c: UserSummary) =>
       {
         this.chad.includeStudent(this.theClass.id, c)
           .subscribe(() => this.refresh());
+      });
+  }
+
+  excludeStudent(stu: UserSummary): void
+  {
+    this.chad.excludeStudent(this.theClass.id, stu)
+      .subscribe(() =>
+      {
+        this.refresh();
+        this.msg.addOk();
       });
   }
 }

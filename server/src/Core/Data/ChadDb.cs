@@ -12,6 +12,19 @@ namespace Chad.Data
         {
         }
 
+        public DbSet<KlRelResourceCourse> RelResourceCourses { get; set; } = null!;
+        public DbSet<KlResourceSummary> ResourceSummaries { get; set; } = null!;
+        public DbSet<KlRelStudentCourse> RelStudentCourses { get; set; } = null!;
+        public DbSet<RelResourceLesson> RelResourceLessons { get; set; } = null!;
+        public DbSet<RelCourseClass> RelCourseClasses { get; set; } = null!;
+        public DbSet<RelStudentClass> RelStudentClasses { get; set; } = null!;
+        public DbSet<DbLesson> Lessons { get; set; } = null!;
+        public DbSet<DbClass> Classes { get; set; } = null!;
+        public DbSet<DbConfig> Configs { get; set; } = null!;
+        public DbSet<DbCourse> Courses { get; set; } = null!;
+        public DbSet<DbMessage> Messages { get; set; } = null!;
+        public DbSet<DbResource> Resources { get; set; } = null!;
+
 
         protected override void OnModelCreating(ModelBuilder builder)
         {
@@ -19,7 +32,7 @@ namespace Chad.Data
                 .Property(msg => msg.Time)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP(6)");
             builder.Entity<DbResource>()
-                .Property(res=>res.UploadTime)
+                .Property(res => res.UploadTime)
                 .HasDefaultValueSql("CURRENT_TIMESTAMP(6)");
 
             builder.Entity<KlResourceSummary>()
@@ -38,24 +51,11 @@ namespace Chad.Data
                 .HasKey(r => new {r.ClassId, r.CourseId});
 
             builder.Entity<RelResourceLesson>()
-                .HasKey(r => new { r.ResourceId, r.LessonId });
+                .HasKey(r => new {r.ResourceId, r.LessonId});
 
             builder.Entity<RelStudentClass>()
-                .HasKey(r => new { r.StudentId, r.ClassId });
+                .HasKey(r => new {r.StudentId, r.ClassId});
             base.OnModelCreating(builder);
         }
-
-        public DbSet<KlRelResourceCourse> RelResourceCourses { get; set; } = null!;
-        public DbSet<KlResourceSummary> ResourceSummaries { get; set; } = null!;
-        public DbSet<KlRelStudentCourse> RelStudentCourses { get; set; } = null!;
-        public DbSet<RelResourceLesson> RelResourceLessons { get; set; } = null!;
-        public DbSet<RelCourseClass> RelCourseClasses { get; set; } = null!;
-        public DbSet<RelStudentClass> RelStudentClasses { get; set; } = null!;
-        public DbSet<DbLesson> Lessons { get; set; } = null!;
-        public DbSet<DbClass> Classes { get; set; } = null!;
-        public DbSet<DbConfig> Configs { get; set; } = null!;
-        public DbSet<DbCourse> Courses { get; set; } = null!;
-        public DbSet<DbMessage> Messages { get; set; } = null!;
-        public DbSet<DbResource> Resources { get; set; } = null!;
     }
 }

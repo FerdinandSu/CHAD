@@ -125,13 +125,13 @@ namespace ChadApi.Controllers
             [FromBody] string[] password)
         {
             var dbu = await AccountManager.GetCurrentUserAsync(); //UserManager.GetUserAsync(User);
-            if (dbu == null) return NotFound();
+            if (dbu == null) return Unauthorized();
             if (await UserManager.CheckPasswordAsync(dbu, password[0]))
             {
                 if ((await UserManager.ChangePasswordAsync(dbu, password[0], password[1])).Succeeded)
                 {
                     await SignInManager.SignOutAsync();
-                    return Unauthorized();
+                    return NoContent();
                 }
 
                 return ApplicationError("新密码不合要求: 4位以上。");
