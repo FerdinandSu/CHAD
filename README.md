@@ -1,5 +1,7 @@
 # CHAD-课程资源管理
 
+HIT(SZ) 数据库系统实验3
+
 ## Environment
 
 - Windows x64
